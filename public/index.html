@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Node Chat</title>
+	<link rel="stylesheet" href="css/chat.css" type="text/css"/>
+</head>
+<body>
+	
+	<div id="chat" data-bind="css:{connected:isConnected}">
+		<h1>Chat</h1>
+		<fieldset class="chat-signin">
+			<label for="chat-user">Screename</label>
+			<input id="chat-user" type="text" data-bind="value:user, returnKey:connect"/>
+			<button data-bind="click:connect">Connect</button>
+		</fieldset>
+		<div class="chat-connected">
+			<div class="chat-signout">
+				Connected as <span data-bind="text:user">User</span> | <button data-bind="click:disconnect">Disconnect</button>
+			</div>
+			<div id="chat-log">
+				<ul data-bind="foreach:chatLog">
+					<li data-bind="css:{status:!user}, style:{backgroundColor:bgColor(user)}">
+						<span class="time" data-bind="text:formatTime()">1:00pm</span>
+						<span class="user" data-bind="text:user, style:{color:color(user)}">User</span>
+						<p data-bind="text:message">Message Text</p>
+					</li>
+				</ul>
+			</div>
+			<fieldset class="chat-message">
+				<input id="chat-message" type="text" data-bind="value:message, returnKey:submit"/>
+				<button data-bind="click:submit">Send</button>
+			</fieldset>
+		</div>
+	</div>
+	
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+    <script src="js/knockout-2.0.0.js"></script>
+	<script src="js/chat.js"></script>
+</body>
+</html>

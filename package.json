@@ -1,0 +1,28 @@
+{
+  "name": "chat.ko",
+  "description": "A simple, attractive chat client built on Socket.io and Knockout.js",
+  "version": "1.0.0",
+  "author": {
+    "name": "Greg MacWilliam",
+    "email": "gmacwill@gmail.com"
+  },
+  "dependencies": {
+    "connect": "1.x",
+    "socket.io": "0.9.6"
+  },
+  "keywords": [
+    "chat",
+	"messaging",
+	"knockout",
+	"socket",
+    "websocket"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/visionmedia/express.git"
+  },
+  "main": "index",
+  "engines": {
+    "node": ">= 0.6.18"
+  }
+}

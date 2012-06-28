@@ -1,0 +1,171 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: black;
+}
+ol, ul {
+  list-style: none;
+}
+a img {
+  border: none;
+}
+
+/* Page styles.
+----------------------------------- */
+body {
+	background:#333 url(../images/grille.png) repeat;
+	font:10px/1.5em Arial, Helvetica, sans-serif;
+}
+a {
+	color:#666;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+
+/* Application styles.
+----------------------------------- */
+#chat {
+	background-color:#fff;
+	border:1px solid #000;
+	border-radius:10px;
+	box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+	margin:25px auto;
+	padding:15px 25px;
+	position:relative;
+	width:400px;
+}
+#chat h1 {
+	font:bold 24px/1.3em Arial,sans-serif;
+	margin:0 0 5px;
+}
+
+/* input form controls. */
+#chat fieldset label {
+	color:#999;
+	display:block;
+	text-transform:uppercase;
+}
+#chat fieldset input,
+#chat fieldset button {
+	background-color:#efefef;
+	border:1px solid #ccc;
+	border-radius:5px;
+	font:12px/18px Arial, Helvetica, sans-serif;
+	padding:5px 5px;
+}
+#chat fieldset input {
+	font-size:14px;
+	width:310px;
+}
+#chat fieldset button {
+	float:right;
+	font-weight:bold;
+	width:70px;
+}
+#chat fieldset button:hover {
+	border:1px solid #bbb;
+	box-shadow:0 1px 2px rgba(0,0,0,0.15);
+}
+#chat .chat-connected fieldset input {
+	width:330px;
+}
+#chat .chat-connected fieldset button {
+	width:50px;
+}
+
+/* user signout controls. */
+#chat .chat-signout {
+	color:#999;
+	position:absolute;
+	right:25px;
+	top:15px;
+}
+#chat .chat-signout button {
+	background-color:transparent;
+	border:none;
+	cursor:pointer;
+	display:inline;
+	font-weight:bold;
+	margin:0;
+	padding:2px 0;
+}
+#chat .chat-signout,
+#chat .chat-signout button {
+	font:11px/1em Arial, Helvetica, sans-serif;
+	line-height:1em;
+}
+#chat .chat-signout button:hover {
+	text-decoration:underline;
+}
+
+/* Chat console styles.
+----------------------------------- */
+#chat-log {
+	border:1px solid #ccc;
+	border-left:none;
+	border-right:none;
+	height:300px;
+	margin:15px 0;
+	overflow:auto;
+	position:relative;
+}
+#chat-log ul {
+	padding:5px 0;
+	width:100%;
+}
+#chat-log li {
+	background-color:#eee;
+	border-radius:5px;
+	font-size:14px;
+	margin:6px;
+	padding:10px;
+}
+#chat-log li .time {
+	color:#999;
+	float:right;
+	font-size:11px;
+	font-style:italic;
+}
+#chat-log li .user {
+	color:#777;
+	display:block;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+#chat-log li.status .user {
+	display:none;
+}
+#chat-log li.status p {
+	color:#999;
+}
+
+/* View mode toggles.
+----------------------------------- */
+.connected .chat-signin,
+.chat-connected {
+	display:none;
+}
+
+.chat-signin,
+.connected .chat-connected {
+	display:block;
+}
